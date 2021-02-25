@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/dropdown.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <script src="https://kit.fontawesome.com/bf6ed1956f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+          <div class="profile">
+            <div class="text">
+              <span class="profile_top1">Today</span>
+              <span class="profile_top2">29</span>
+              <span>| Total 960209</span>
+            </div>
+            <div class="boxx box">
+              <img src="./static/images/모각코.jpg" class="profile_img">
+              <div class="profile_text">
+                <span>Querencia</span>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown_box">
+                  <div>파도타기</div>
+                  <div class="triangle"></div>
+                </div>
+                <div class="dropdown_content">
+                  <a href="https://blog.naver.com/abbiddo" target="_blank">블로그 가기</a>
+                  <a href="https://www.instagram.com/abbiddo/" target="_blank">인스타 가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main">
+            <div class="text">
+              <span class="main_top_name">abbiddo</span><span>'s page</span>
+              <span class="main_top_url">http:// 어쩌고 저쩌고...</span>
+            </div>
+            <div class="boxx box">
+              <div class="date_box">
+                <div class="today">02.22<br>Mon</div>
+                <div class="date_list">
+                  <div class="date">1</div>
+                  <div class="date">2</div>
+                  <div class="date">3</div>
+                  <div class="date">4</div>
+                  <div class="date">5</div>
+                  <div class="date blue">6</div>
+                  <div class="date red">7</div>
+                  <div class="date">8</div>
+                  <div class="date">9</div>
+                  <div class="date">10</div>
+                  <div class="date">11</div>
+                  <div class="date">12</div>
+                  <div class="date blue">13</div>
+                  <div class="date red">14</div>
+                  <div class="date">15</div>
+                  <div class="date">16</div>
+                  <div class="date">17</div>
+                  <div class="date">18</div>
+                  <div class="date">19</div>
+                  <div class="date blue">20</div>
+                  <div class="date red">21</div>
+                  <div class="date">22</div>
+                  <div class="date">23</div>
+                  <div class="date">24</div>
+                  <div class="date">25</div>
+                  <div class="date">26</div>
+                  <div class="date blue">27</div>
+                  <div class="date red">28</div>
+                </div>
+              </div>
+              <div class="diary">
+                <div class="diary_in">
+                  <div class="diary_date">2021.02.15 월 18 : 00</div>
+                  <div class="diary_text">Querencia<br>정규앨범<br>노래 21곡 장르 다양<br>취향것 골라 듣기 !!<br>🛵🚲💚💙💜</div>
+                </div>
+                <div class="diary_in">
+                  <div class="diary_date">2021.02.09 화 02 : 09</div>
+                  <div class="diary_text">생일?<br>birthday?<br>HBD<br>CHDAY<br>🎉🎁🎂</div>
+                </div>
+                <div class="diary_in">
+                  <div class="diary_date">2021.01.27 수 11 : 30</div>
+                  <div class="diary_text">운전면허 합격했다<br>부릉부릉<br>나도 베스트 드라이버<br>🚗🚓</div>
+                </div>
+                <div class="diary_in">
+                  <div class="diary_date">2021.01.15 금 11 : 00</div>
+                  <div class="diary_text">졸업했지롱<br>학교 빠빠이<br><i class="fas fa-graduation-cap"></i><i class="fas fa-user-graduate"></i></div>
+                </div>
+                <button class="secret" onclick="getTextFile()">
+                  <i class="fas fa-unlock-alt"></i> abbiddo's 비밀 일기 보기
+                </button>
+                <div class="diary_in" id="qlalf">
+                  <div class="diary_date">abbiddo's 비밀 일기</div>
+                  <div class="diary_text" id="secret_diary"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="menu">
+            <div class="row_top"></div>
+            <div class="row_bottom">
+              <div class="menu_back"><a href="./index.html">홈</a></div>
+              <div class="menu_back"><a href="./photo.html">사진첩</a></div>
+              <div class="menu_back"><a href="./diary.html">다이어리</a></div>
+              <div class="menu_back"><a href="#">게시판</a></div>
+              <div class="menu_back"><a href="./moon.html">방명록</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function getTextFile() {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function (event) {
+          processFile(event.target.files[0]);
+        };
+       input.click();
+     }
+
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function () {
+          document.getElementById("secret_diary").innerText = reader.result;
+          document.getElementById("qlalf").style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>

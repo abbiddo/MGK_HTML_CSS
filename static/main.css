@@ -1,0 +1,60 @@
+/**타이틀 쓰기 위한 공간*/
+.title{
+  flex: 0.2;
+  margin: 25px 15px 0px 15px;
+}
+.title_text{
+  color: darkblue; font-weight: 700;
+}
+
+/**뉴스 공간*/
+.news{
+  flex: 2;
+  margin: 0px 15px 0px 15px;
+
+  display: flex;
+  flex-direction: row; /**flex를 가로로 적용*/
+}
+
+/**뉴스의 왼쪽 공간*/
+.news_left{
+  flex: 1;
+}
+.back{
+  padding: 1px 2px 1px 2px;
+  border-radius: 4px;
+  margin: 0px 2px 0px 0px;
+}
+.back_red{
+  background-color: red; color: white;
+}
+.back_blue{
+  background-color: blue; color: white;
+}
+
+/**뉴스의 오른쪽 공간*/
+.news_right{
+  flex: 0.5;
+}
+.news_right_date{
+  font-size: 10px;
+}
+.news_right_text{
+  margin: 0px 0px 0px 30px;
+}
+/**밑줄*/
+.alxwnf{
+  border-bottom: 1px dashed grey;
+}
+
+.mainroom{
+  width: 500px;
+  height: 300px;
+  margin: 0px 15px 0px 15px;
+}
+
+/**title 클래스 안에 있는 img에 적용*/
+.mainroom > img{
+  width: 100%;
+  margin-top: 10px;
+}

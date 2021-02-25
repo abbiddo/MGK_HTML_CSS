@@ -1,0 +1,96 @@
+/*날짜 틀*/
+.date_box{
+  margin: 15px;
+  width: 500px;
+  height: 50px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+/*날짜 틀 안에 오늘 날짜*/
+.today{
+  flex: 0 0 2rem;
+  margin: 0 1rem;
+  text-align: center;
+  color: #1e90ff;
+  font-weight: 700;  /*폰트 굵기*/
+  font-family: 'LAB디지털';
+}
+/*일을 나타내기 위함*/
+.date_list{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/*일 숫자 속성*/
+.date{
+  flex: 0 0 25px;
+  color: grey;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'LAB디지털';
+}
+
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}
+/*다이어리 내용을 넣기 위한 큰 틀*/
+.diary{
+  margin: 15px;
+  width: 500px;
+  height: 450px;
+  overflow: auto;
+}
+/*다이어리 마다 나누는 틀*/
+.diary_in{
+  border-radius: 5px;
+  border: 1px solid #c7c7c7;
+  margin: 0px 0px 15px 0px;
+  padding: 0px 0px 15px 0px;
+}
+
+.diary_date{
+  margin: 15px;
+  font-family: 'WandohopeB';
+  color: #1e90ff;
+}
+
+.diary_text{
+  text-align: center;
+  font-family: 'WandohopeB';
+}
+
+/*비밀 일기 생성하는 비밀 박스*/
+.secret{
+  width: 220px;
+  padding: 0px 15px 0px 0px;
+  margin: 0px 130px;
+  background-color: white;
+  border: none;
+}
+
+button{
+  color: white;
+}
+/*button태그 바로 하위에 있는 i에 적용*/
+button > i{
+  margin: 15px;
+}
+/*diary_photo 클리스를 hover 시 속성 적용*/
+.secret:hover{
+  background-color: #b8d992;
+  color: black;
+}
+
+/*비밀 일기 내용 박스*/
+#qlalf{
+  display: none;
+}
+#qlalf > .dairy_date {
+  color: black;
+}

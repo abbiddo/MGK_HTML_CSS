@@ -1,0 +1,37 @@
+.moon{
+  margin: 15px;
+  widows: 500px;
+  height: 510px;
+  overflow: auto;
+}
+.moon_text{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 9rem;
+}
+.moontext{
+  margin: 15px;
+  font-family: 'Wemakeprice-Regular';
+}
+.bar{
+  background-color: #eeeeee;
+  padding: 10px;
+  font-family: 'Wemakeprice-Regular';
+  margin: 20px 0px 0px 0px;
+}
+.back_box{
+  margin: 10px 0px;
+  width: 8rem;
+  height: 8rem;
+  background-size: cover;
+}
+.background1{
+  background-image: url("./images/배경1.jpg");
+}
+.background2{
+  background-image: url("./images/배경2.jpg");
+}
+.back_box > img {
+  width: 100%;
+}

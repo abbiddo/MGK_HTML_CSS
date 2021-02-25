@@ -1,0 +1,17 @@
+.photo{
+  width: 500px;
+  height: 500px;
+  margin: 15px;
+  overflow: auto;
+}
+.photo_name{
+  background-color: #ffffe0;
+  padding: 5px;
+  font-family: 'WandohopeB';
+}
+
+/**phtot 클래스 하위의 img에만 적용*/
+.photo > img{
+  width: 100%; /**세로는 자동으로 지정*/
+  margin-top: 10px;
+}
